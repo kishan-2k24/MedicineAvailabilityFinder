@@ -26,8 +26,8 @@ input {
 }
 
 .container {
-    width: 92%;
-    max-width: 1120px;
+    width: 98%;
+    max-width: 1400px;
     margin: auto;
 }
 
@@ -36,7 +36,7 @@ input {
 
 .navbar {
     width: 100%;
-    background: white;
+    background: rgb(210, 250, 236);
     border-bottom: 1px solid #e1e8e4;
     position: sticky;
     top: 0;
@@ -45,7 +45,6 @@ input {
 
 .nav-container {
     height: 72px;
-
     display: flex;
     align-items: center;
     gap: 30px;
@@ -97,17 +96,17 @@ input {
 }
 
 .nav-menu a {
-    color: #53615b;
+    color: #000;
 
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 700;
 
     transition: 0.3s;
 }
 
 .nav-menu a:hover,
 .nav-menu .active {
-    color: #087f5b;
+    color: #029b17de;
 }
 
 
@@ -257,8 +256,6 @@ input {
 
     background: #087f5b;
 
-    color: white;
-
     padding: 12px 22px;
 
     border-radius: 9px;
@@ -267,7 +264,10 @@ input {
 
     cursor: pointer;
 }
-
+.search-box button{
+    color: white;
+    font-size: 15px;
+}
 .search-box button:hover {
     background: #056b4c;
 }
