@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pharmacy Details - MedicineFinder</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pharmacy.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="header">
+    <div class="nav">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">+</span>
+            <span>
+                <strong>Medicine<span>Finder</span></strong>
+                <small>Find Medicine. Save Time.</small>
+            </span>
+        </a>
+
+        <div class="desktop-menu">
+            <a href="index.html">Home</a>
+            <a href="search.html">Search Medicine</a>
+            <a href="search.html">Nearby Pharmacies</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="nav-actions">
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="signup.html" class="signup-btn">Sign Up</a>
+        </div>
+
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="search.html">Search Medicine</a>
+        <a href="search.html">Nearby Pharmacies</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+    </div>
+</header>
+
+
+<main class="container">
+
+    <!-- BREADCRUMB -->
+
+    <div class="breadcrumb">
+        <a href="search.html">← Back to Search Results</a>
+        <span>/</span>
+        <b>Pharmacy Details</b>
+    </div>
+
+
+    <!-- PHARMACY HEADER -->
+
+    <section class="pharmacy-header">
+
+        <div class="pharmacy-logo">
+            ✚
+        </div>
+
+        <div class="pharmacy-title">
+
+            <div class="verified">
+                ✓ VERIFIED PHARMACY
+            </div>
+
+            <h1>MedPlus Pharmacy</h1>
+
+            <p>
+                📍 Golghar, Gorakhpur, Uttar Pradesh
+                · <b>0.8 km</b> from you
+            </p>
+
+            <div class="rating">
+
+                <span class="stars">★ 4.7</span>
+
+                <span>286 Reviews</span>
+
+                <span class="open">
+                    ● Open Now
+                </span>
+
+                <span>
+                    Closes at 10:00 PM
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="header-buttons">
+
+            <button
+                class="outline-btn"
+                onclick="callPharmacy()">
+
+                ☎ Call Pharmacy
+
+            </button>
+
+            <button
+                class="primary-btn"
+                onclick="getDirections()">
+
+                ↗ Get Directions
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONTENT -->
+
+    <section class="content-grid">
+
+
+        <!-- LEFT -->
+
+        <div class="left-content">
+
+
+            <!-- MEDICINE -->
+
+            <div class="card">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <small>
+                            MEDICINE AVAILABILITY
+                        </small>
+
+                        <h2>Dolo 650</h2>
+
+                    </div>
+
+                    <span class="available">
+                        ● In Stock
+                    </span>
+
+                </div>
+
+
+                <div class="medicine-info">
+
+                    <div class="medicine-icon">
+                        💊
+                    </div>
+
+                    <div class="medicine-name">
+
+                        <h3>
+                            Paracetamol 650 mg
+                        </h3>
+
+                        <p>
+                            Strip of 15 tablets · Dolo 650
+                        </p>
+
+                    </div>
+
+                    <div class="medicine-price">
+
+                        <small>Price</small>
+
+                        <strong>
+                            ₹32.50
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stock-info">
+
+                    <span>
+                        ✓ Available now
+                    </span>
+
+                    <span>
+                        Approx.
+                        <b>24 strips</b>
+                        in stock
+                    </span>
+
+                </div>
+
+
+                <!-- QUANTITY -->
+
+                <div class="reserve-area">
+
+                    <div>
+
+                        <label>
+                            Quantity
+                        </label>
+
+                        <div class="quantity">
+
+                            <button onclick="changeQuantity(-1)">
+                                −
+                            </button>
+
+                            <span id="quantity">
+                                1
+                            </span>
+
+                            <button onclick="changeQuantity(1)">
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="reserve-btn"
+                        onclick="reserveMedicine()">
+
+                        📦 Reserve Medicine
+
+                    </button>
+
+                </div>
+
+
+                <p class="note">
+                    Reservation holds the medicine for a limited time.
+                    Please confirm availability with the pharmacy before visiting.
+                </p>
+
+            </div>
+
+
+
+            <!-- STORE DETAILS -->
+
+            <div class="card">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <small>
+                            PHARMACY INFORMATION
+                        </small>
+
+                        <h2>
+                            Store Details
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="details-grid">
+
+                    <div class="detail-item">
+
+                        <div class="detail-icon">
+                            📍
+                        </div>
+
+                        <div>
+
+                            <b>Address</b>
+
+                            <p>
+                                Golghar Main Road,
+                                Near City Mall,
+                                Gorakhpur,
+                                Uttar Pradesh 273001
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <div class="detail-icon">
+                            🕐
+                        </div>
+
+                        <div>
+
+                            <b>Opening Hours</b>
+
+                            <p>
+                                Today:
+                                <strong>
+                                    8:00 AM – 10:00 PM
+                                </strong>
+                                <br>
+                                Open 7 days a week
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <div class="detail-icon">
+                            ☎
+                        </div>
+
+                        <div>
+
+                            <b>Phone</b>
+
+                            <p>
+                                +91 98765 43210
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <div class="detail-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <b>Services</b>
+
+                            <p>
+                                Prescription Medicines ·
+                                OTC · Health Products
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- REVIEWS -->
+
+            <div class="card">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <small>
+                            CUSTOMER REVIEWS
+                        </small>
+
+                        <h2>
+                            What customers say
+                        </h2>
+
+                    </div>
+
+                    <strong class="review-rating">
+                        ★ 4.7
+                    </strong>
+
+                </div>
+
+
+                <div class="review">
+
+                    <div class="review-avatar">
+                        RK
+                    </div>
+
+                    <div>
+
+                        <b>
+                            Rahul Kumar
+                        </b>
+
+                        <span class="review-stars">
+                            ★★★★★
+                        </span>
+
+                        <p>
+                            Medicine was available and
+                            the staff was helpful.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="review">
+
+                    <div class="review-avatar">
+                        AS
+                    </div>
+
+                    <div>
+
+                        <b>
+                            Anjali Singh
+                        </b>
+
+                        <span class="review-stars">
+                            ★★★★★
+                        </span>
+
+                        <p>
+                            Quick service and easy to locate.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RIGHT -->
+
+        <aside>
+
+
+            <!-- MAP -->
+
+            <div class="card map-card">
+
+                <div class="map">
+
+                    <div class="road road1"></div>
+
+                    <div class="road road2"></div>
+
+                    <div class="water"></div>
+
+                    <div class="map-pin">
+                        ✓
+                    </div>
+
+                    <div class="user-location">
+                        ●
+                    </div>
+
+                    <span class="map-label">
+                        Golghar
+                    </span>
+
+                </div>
+
+
+                <button
+                    class="directions-btn"
+                    onclick="getDirections()">
+
+                    ↗ Get Directions
+
+                </button>
+
+            </div>
+
+
+
+            <!-- WHY CHOOSE -->
+
+            <div class="card">
+
+                <small>
+                    WHY CHOOSE THIS PHARMACY
+                </small>
+
+                <ul class="features">
+
+                    <li>
+                        ✓ Verified pharmacy
+                    </li>
+
+                    <li>
+                        ✓ Real-time stock updates
+                    </li>
+
+                    <li>
+                        ✓ Easy reservation
+                    </li>
+
+                    <li>
+                        ✓ Multiple payment options
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- REQUEST -->
+
+            <div class="card request-card">
+
+                <div class="request-icon">
+                    ?
+                </div>
+
+                <div>
+
+                    <b>
+                        Medicine not available?
+                    </b>
+
+                    <p>
+                        Request it from nearby pharmacies.
+                    </p>
+
+                    <button onclick="requestMedicine()">
+                        Request Medicine →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+</main>
+
+
+
+<footer>
+
+    <div>
+        <h3>
+            Medicine<span>Finder</span>
+        </h3>
+
+        <p>
+            Find medicine. Save time.
+        </p>
+    </div>
+
+    <p>
+        © 2026 MedicineFinder. Demo Project.
+    </p>
+
+</footer>
+
+
+<script src="js/pharmacy.js"></script>
+
+</body>
+</html>
