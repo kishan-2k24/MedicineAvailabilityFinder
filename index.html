@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MedicineFinder - Find Medicine Nearby</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <div class="nav">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">+</span>
+            <span>
+                <strong>Medicine<span>Finder</span></strong>
+                <small>Find Medicine. Save Time.</small>
+            </span>
+        </a>
+
+        <div class="desktop-menu">
+            <a href="index.html">Home</a>
+            <a href="search.html">Search Medicine</a>
+            <a href="search.html">Nearby Pharmacies</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="nav-actions">
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="signup.html" class="signup-btn">Sign Up</a>
+        </div>
+
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="search.html">Search Medicine</a>
+        <a href="search.html">Nearby Pharmacies</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+    </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="health-badge">
+            🛡️ Your Health, Our Priority
+        </div>
+
+        <h1>
+            Find Your Medicine,<br>
+            <span>Save Your Time.</span>
+        </h1>
+
+        <p class="hero-text">
+            Find medicines at nearby pharmacies with real-time
+            availability, best prices and easy reservation options —
+            all in one place.
+        </p>
+
+        <!-- SEARCH BOX -->
+        <div class="search-box">
+
+            <div class="search-field">
+                <span>⌕</span>
+                <div>
+                    <small>Search medicine</small>
+                    <input
+                        id="medicineInput"
+                        type="text"
+                        placeholder="e.g. Dolo 650">
+                </div>
+            </div>
+
+            <div class="location-field">
+                <span>⌖</span>
+                <div>
+                    <small>Your location</small>
+                    <p id="locationText">Use my current location</p>
+                </div>
+            </div>
+
+            <button onclick="searchMedicine()" class="search-btn">
+                🔍 Search
+            </button>
+
+        </div>
+
+        <!-- POPULAR SEARCH -->
+        <div class="popular">
+            <strong>Popular Searches:</strong>
+
+            <button onclick="setMedicine('Dolo 650')">Dolo 650</button>
+            <button onclick="setMedicine('Paracetamol')">Paracetamol</button>
+            <button onclick="setMedicine('Azithromycin')">Azithromycin</button>
+            <button onclick="setMedicine('Metformin')">Metformin</button>
+        </div>
+
+    </div>
+
+
+    <!-- HERO VISUAL -->
+    <div class="hero-visual">
+
+        <div class="floating-card availability">
+            ✓
+            <div>
+                <strong>Real-time</strong>
+                <small>Availability</small>
+            </div>
+        </div>
+
+        <div class="medicine-art">
+
+            <div class="map-circle">
+                📍
+                <span>📍</span>
+                <span>📍</span>
+                <span>📍</span>
+            </div>
+
+            <div class="medicine-bottle">
+                <div>✚</div>
+            </div>
+
+            <div class="pharmacy-building">
+                <strong>PHARMACY</strong>
+                <div>▥ ▥ ▥</div>
+            </div>
+
+        </div>
+
+        <div class="floating-card price">
+            ₹
+            <div>
+                <strong>Best</strong>
+                <small>Prices</small>
+            </div>
+        </div>
+
+        <div class="floating-card nearby">
+            📍
+            <div>
+                <strong>Nearby</strong>
+                <small>Pharmacies</small>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+<section class="features-section">
+
+    <div class="feature">
+
+        <div class="feature-icon">⚡</div>
+
+        <h3>Save Time</h3>
+
+        <p>
+            Skip the hassle, find medicines faster.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">📍</div>
+
+        <h3>Nearby Pharmacies</h3>
+
+        <p>
+            Discover trusted pharmacies near you.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">🛡️</div>
+
+        <h3>Best Prices</h3>
+
+        <p>
+            Compare prices and get the best deal.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">🔔</div>
+
+        <h3>Real-Time Availability</h3>
+
+        <p>
+            See live stock updates before you visit.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">♥</div>
+
+        <h3>Secure & Trusted</h3>
+
+        <p>
+            Your data is safe with us.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+<section class="how-section">
+
+    <div class="section-heading">
+
+        <span>⚕ HOW IT WORKS</span>
+
+        <h2>
+            Find Medicine in<br>
+            <b>3 Simple Steps</b>
+        </h2>
+
+        <p>
+            A simple way to search, compare and reserve medicines.
+        </p>
+
+    </div>
+
+
+    <div class="steps">
+
+        <div class="step">
+
+            <div class="step-number">01</div>
+
+            <div class="step-icon">⌕</div>
+
+            <h3>Search Medicine</h3>
+
+            <p>
+                Enter the name of the medicine you need.
+            </p>
+
+        </div>
+
+
+        <div class="arrow">→</div>
+
+
+        <div class="step">
+
+            <div class="step-number">02</div>
+
+            <div class="step-icon">▣</div>
+
+            <h3>Find a Pharmacy</h3>
+
+            <p>
+                Explore nearby pharmacies and check availability.
+            </p>
+
+        </div>
+
+
+        <div class="arrow">→</div>
+
+
+        <div class="step">
+
+            <div class="step-number">03</div>
+
+            <div class="step-icon">▣</div>
+
+            <h3>Reserve Medicine</h3>
+
+            <p>
+                Send a reservation request and save time.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+<section class="stats">
+
+    <div>
+        <span>🏪</span>
+        <strong>100+</strong>
+        <small>Pharmacy Partners</small>
+    </div>
+
+    <div>
+        <span>💊</span>
+        <strong>500+</strong>
+        <small>Medicines Listed</small>
+    </div>
+
+    <div>
+        <span>👥</span>
+        <strong>1,000+</strong>
+        <small>Happy Users</small>
+    </div>
+
+    <div>
+        <span>🛡️</span>
+        <strong>99%</strong>
+        <small>Availability Accuracy</small>
+    </div>
+
+</section>
+
+
+<!-- ================= REVIEWS ================= -->
+<section class="reviews-section">
+
+    <div class="review-heading">
+        <span>✓ WHAT PEOPLE SAY</span>
+
+        <h2>Trusted by Thousands</h2>
+
+        <p>
+            Real stories from users who found medicines easily.
+        </p>
+    </div>
+
+
+    <div class="reviews">
+
+        <div class="review">
+            <div class="avatar">R</div>
+
+            <div>
+                <strong>Rohit Sharma</strong>
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    “Super helpful! I found my medicine nearby
+                    and saved a lot of time.”
+                </p>
+
+                <small>📍 Gorakhpur</small>
+            </div>
+        </div>
+
+
+        <div class="review">
+            <div class="avatar">P</div>
+
+            <div>
+                <strong>Priya Singh</strong>
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    “Easy to use and very reliable.
+                    Highly recommended!”
+                </p>
+
+                <small>📍 Lucknow</small>
+            </div>
+        </div>
+
+
+        <div class="review">
+            <div class="avatar">A</div>
+
+            <div>
+                <strong>Amit Verma</strong>
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    “Great platform. Prices are also better
+                    than other options.”
+                </p>
+
+                <small>📍 Varanasi</small>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+<section class="health-cta">
+
+    <div>
+        <span class="heart-icon">♥</span>
+
+        <div>
+            <h3>Your Health Matters</h3>
+
+            <p>
+                Find the right medicine, at the right place,
+                at the right time.
+            </p>
+        </div>
+    </div>
+
+    <a href="search.html">
+        Search Medicine →
+    </a>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer>
+
+        <a href="index.html" class="logo" id="Logo">
+            <span class="logo-icon">+</span>
+            <span>
+                <strong>Medicine<span>Finder</span></strong>
+                <small>Find Medicine. Save Time.</small>
+            </span>
+        </a>
+
+    <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+    </div>
+
+    <p class="copyright">
+        © 2026 MedicineFinder. All rights reserved.
+    </p>
+
+</footer>
+
+
+<!-- ================= MOBILE BOTTOM NAV ================= -->
+<nav class="bottom-nav">
+
+    <a class="active" href="index.html">
+        <span>⌂</span>
+        Home
+    </a>
+
+    <a href="search.html">
+        <span>⌕</span>
+        Search
+    </a>
+
+    <a href="#">
+        <span>♡</span>
+        Saved
+    </a>
+
+    <a href="dashboard.html">
+        <span>♙</span>
+        Profile
+    </a>
+
+</nav>
+
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
