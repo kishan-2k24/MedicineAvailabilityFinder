@@ -1,0 +1,715 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f6fbf9;
+    color: #14221e;
+}
+
+/* PAGE */
+
+.container {
+    padding: 30px 6%;
+}
+
+.breadcrumb {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 22px;
+
+    font-size: 13px;
+    color: #71807a;
+}
+
+.breadcrumb a {
+    color: #087f60;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* PHARMACY HEADER */
+
+.pharmacy-header {
+    background: white;
+
+    border: 1px solid #dce7e3;
+    border-radius: 16px;
+
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.pharmacy-logo {
+    width: 72px;
+    height: 72px;
+
+    border-radius: 16px;
+
+    background: #e5f8f0;
+    color: #07966d;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.pharmacy-title {
+    flex: 1;
+}
+
+.verified {
+    font-size: 10px;
+    color: #07966d;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.pharmacy-title h1 {
+    font-size: 29px;
+    margin: 6px 0;
+}
+
+.pharmacy-title p {
+    font-size: 13px;
+    color: #687570;
+}
+
+.rating {
+    display: flex;
+    gap: 13px;
+    margin-top: 10px;
+
+    font-size: 12px;
+    color: #687570;
+}
+
+.stars {
+    color: #e79521;
+    font-weight: bold;
+}
+
+.open {
+    color: #07966d;
+    font-weight: bold;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 9px;
+}
+
+.outline-btn,
+.primary-btn {
+    padding: 12px 17px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.outline-btn {
+    background: white;
+    border: 1px solid #b7dccc;
+    color: #087f60;
+}
+
+.primary-btn {
+    background: #07966d;
+    border: 0;
+    color: white;
+}
+
+
+/* CONTENT */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 20px;
+
+    margin-top: 20px;
+}
+
+.left-content,
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #dce7e3;
+    border-radius: 14px;
+
+    padding: 21px;
+}
+
+.card-heading {
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #edf1ef;
+
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.card small {
+    color: #087f60;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.card h2 {
+    font-size: 21px;
+    margin-top: 5px;
+}
+
+.available {
+    background: #e5f8ef;
+    color: #07865f;
+
+    padding: 8px 11px;
+    border-radius: 8px;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* MEDICINE */
+
+.medicine-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.medicine-icon {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 12px;
+    background: #f1f8f5;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 28px;
+}
+
+.medicine-name {
+    flex: 1;
+}
+
+.medicine-name h3 {
+    font-size: 16px;
+}
+
+.medicine-name p {
+    font-size: 11px;
+    color: #71807a;
+    margin-top: 4px;
+}
+
+.medicine-price {
+    text-align: right;
+}
+
+.medicine-price small,
+.medicine-price strong {
+    display: block;
+}
+
+.medicine-price small {
+    color: #71807a;
+}
+
+.medicine-price strong {
+    font-size: 21px;
+    margin-top: 3px;
+}
+
+
+/* STOCK */
+
+.stock-info {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 16px 0;
+
+    padding: 12px;
+
+    background: #f1fbf7;
+    border: 1px solid #d9eee6;
+
+    border-radius: 9px;
+
+    color: #07855f;
+    font-size: 12px;
+}
+
+
+/* RESERVE */
+
+.reserve-area {
+    display: flex;
+    gap: 20px;
+    align-items: end;
+}
+
+.reserve-area label {
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.quantity {
+    height: 43px;
+
+    border: 1px solid #dce7e3;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.quantity button {
+    width: 40px;
+    height: 100%;
+
+    border: 0;
+    background: #f3f6f5;
+
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+.quantity span {
+    width: 35px;
+    text-align: center;
+}
+
+.reserve-btn {
+    flex: 1;
+
+    height: 43px;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: #07966d;
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.note {
+    font-size: 10px;
+    color: #78847f;
+
+    margin-top: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* DETAILS */
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px;
+
+    margin-top: 18px;
+}
+
+.detail-item {
+    display: flex;
+    gap: 12px;
+}
+
+.detail-icon {
+    width: 35px;
+    height: 35px;
+
+    border-radius: 8px;
+
+    background: #eaf8f3;
+    color: #07855f;
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+}
+
+.detail-item b {
+    font-size: 12px;
+}
+
+.detail-item p {
+    font-size: 11px;
+    color: #687570;
+
+    line-height: 1.6;
+
+    margin-top: 4px;
+}
+
+
+/* REVIEWS */
+
+.review {
+    display: flex;
+    gap: 12px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #edf1ef;
+
+    font-size: 12px;
+}
+
+.review-avatar {
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    background: #e9f5f1;
+    color: #087f60;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.review-stars {
+    color: #e79521;
+}
+
+.review p {
+    font-size: 11px;
+    color: #6d7975;
+    margin-top: 5px;
+}
+
+.review-rating {
+    color: #e79521;
+}
+
+
+/* MAP */
+
+.map-card {
+    padding: 12px;
+}
+
+.map {
+    height: 200px;
+
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #e8f1ea;
+
+    background-image:
+        linear-gradient(#ffffff80 1px, transparent 1px),
+        linear-gradient(90deg, #ffffff80 1px, transparent 1px);
+
+    background-size: 35px 35px;
+}
+
+.road {
+    position: absolute;
+
+    width: 120%;
+    height: 10px;
+
+    background: white;
+}
+
+.road1 {
+    top: 38%;
+    transform: rotate(-20deg);
+}
+
+.road2 {
+    top: 65%;
+    transform: rotate(30deg);
+}
+
+.water {
+    position: absolute;
+
+    right: 8%;
+    top: -20%;
+
+    width: 70px;
+    height: 150%;
+
+    background: #d6edf0;
+
+    transform: rotate(15deg);
+}
+
+.map-pin {
+    position: absolute;
+
+    top: 40%;
+    left: 55%;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50% 50% 50% 0;
+
+    transform: rotate(-45deg);
+
+    background: #07966d;
+
+    color: white;
+
+    display: grid;
+    place-items: center;
+
+    border: 3px solid white;
+
+    font-weight: bold;
+}
+
+.user-location {
+    position: absolute;
+
+    top: 55%;
+    left: 46%;
+
+    color: #2675ff;
+
+    border: 3px solid white;
+
+    border-radius: 50%;
+}
+
+.map-label {
+    position: absolute;
+
+    top: 25%;
+    left: 58%;
+
+    background: white;
+
+    padding: 5px 8px;
+
+    border-radius: 5px;
+
+    font-size: 9px;
+
+    box-shadow: 0 2px 6px #0002;
+}
+
+.directions-btn {
+    width: 100%;
+
+    height: 42px;
+
+    margin-top: 10px;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    background: #07966d;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* FEATURES */
+
+.features {
+    list-style: none;
+    margin-top: 12px;
+}
+
+.features li {
+    padding: 10px 0;
+
+    border-bottom: 1px solid #edf1ef;
+
+    font-size: 12px;
+
+    color: #52615b;
+}
+
+
+/* REQUEST */
+
+.request-card {
+    display: flex;
+    gap: 12px;
+
+    background: #effaf6;
+}
+
+.request-icon {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    background: #07966d;
+
+    color: white;
+
+    display: grid;
+    place-items: center;
+
+    font-weight: bold;
+}
+
+.request-card b {
+    font-size: 12px;
+}
+
+.request-card p {
+    font-size: 11px;
+
+    color: #687570;
+
+    margin: 4px 0 8px;
+}
+
+.request-card button {
+    border: 0;
+    background: none;
+
+    color: #087f60;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #0d2d26;
+
+    color: white;
+
+    padding: 28px 6%;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+footer p {
+    color: #b8cbc6;
+    font-size: 11px;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px) {
+
+    nav {
+        display: none;
+    }
+
+    .pharmacy-header {
+        flex-wrap: wrap;
+    }
+
+    .header-buttons {
+        width: 100%;
+    }
+
+    .header-buttons button {
+        flex: 1;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media(max-width:600px) {
+
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    .nav-buttons {
+        display: none;
+    }
+
+    .container {
+        padding: 20px 14px;
+    }
+
+    .pharmacy-title h1 {
+        font-size: 23px;
+    }
+
+    .rating {
+        flex-wrap: wrap;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .medicine-info {
+        align-items: flex-start;
+    }
+
+    .reserve-area {
+        align-items: stretch;
+    }
+
+    footer {
+        display: block;
+    }
+
+    footer p {
+        margin-top: 10px;
+    }
+
+}
